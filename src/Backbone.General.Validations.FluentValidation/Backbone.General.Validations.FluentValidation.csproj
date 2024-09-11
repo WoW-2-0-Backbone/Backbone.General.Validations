@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <Title>WoW2.Backbone.General.Validations.FluentValidation</Title>
+        <PackageId>WoW2.Backbone.General.Validations.FluentValidation</PackageId>
+        <Description>Provides integration with FluentValidation for handling validations.</Description>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageTags>validations, fluentvalidation, abstractions, general</PackageTags>
+        <Version>8.0.0-alpha.1</Version>
+        <Authors>WoW 2.0 Team</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Validations.FluentValidation</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Validations.FluentValidation</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageIcon>wow2.png</PackageIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="wow2.png" Pack="true" PackagePath=""/>
+        <None Include="README.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+    </ItemGroup>
+    
+</Project>
