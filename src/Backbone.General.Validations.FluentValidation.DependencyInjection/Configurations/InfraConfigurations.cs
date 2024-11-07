@@ -2,7 +2,7 @@ using System.Reflection;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Backbone.General.Validations.FluentValidation.Configurations;
+namespace Backbone.General.Validations.FluentValidation.DependencyInjection.Configurations;
 
 /// <summary>
 /// Provides extension methods to configure the fluent validation.

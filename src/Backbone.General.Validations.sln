@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backbone.General.Validation
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backbone.General.Validations.FluentValidation", "Backbone.General.Validations.FluentValidation\Backbone.General.Validations.FluentValidation.csproj", "{6A28ADFF-5397-4CFA-BBA5-E84654E8BF8A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FluentValidation", "FluentValidation", "{D266F9D1-BE6D-4974-9855-824393E8A2A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backbone.General.Validations.FluentValidation.DependencyInjection", "Backbone.General.Validations.FluentValidation.DependencyInjection\Backbone.General.Validations.FluentValidation.DependencyInjection.csproj", "{47E53F98-EB47-4A7F-B0CE-607C829EA225}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{6A28ADFF-5397-4CFA-BBA5-E84654E8BF8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A28ADFF-5397-4CFA-BBA5-E84654E8BF8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A28ADFF-5397-4CFA-BBA5-E84654E8BF8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47E53F98-EB47-4A7F-B0CE-607C829EA225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E53F98-EB47-4A7F-B0CE-607C829EA225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E53F98-EB47-4A7F-B0CE-607C829EA225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E53F98-EB47-4A7F-B0CE-607C829EA225}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A28ADFF-5397-4CFA-BBA5-E84654E8BF8A} = {D266F9D1-BE6D-4974-9855-824393E8A2A4}
+		{47E53F98-EB47-4A7F-B0CE-607C829EA225} = {D266F9D1-BE6D-4974-9855-824393E8A2A4}
 	EndGlobalSection
 EndGlobal
