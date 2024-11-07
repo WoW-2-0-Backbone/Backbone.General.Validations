@@ -1,4 +1,4 @@
-﻿using Backbone.General.Validations.Abstractions.Exceptions;
+﻿using Backbone.General.Exceptions.Abstractions.Exceptions.General;
 
 namespace Backbone.General.Validations.Abstractions.Extensions;
 
@@ -8,23 +8,22 @@ namespace Backbone.General.Validations.Abstractions.Extensions;
 public static class ValidationExtensions
 {
     /// <summary>
-    /// Attempts to check and get validation exception from app exception.
+    /// Attempts to check and retrieve a specific validation exception from an exception chain.
     /// </summary>
+    /// <typeparam name="TValidationException">The type of validation exception to search for.</typeparam>
     /// <param name="exception">The base exception to check if it contains any validation exceptions.</param>
-    /// <param name="validationException">Found validation exception.</param>
-    /// <returns>True, if any validation exception is found, otherwise false.</returns>
-    public static bool TryGetValidationException(this Exception exception, out AppValidationException? validationException)
+    /// <param name="validationException">Found validation exception to the specified type.</param>
+    /// <returns>True if any validation exception to the specified type is found, otherwise false.</returns>
+    public static bool TryGetValidationException<TValidationException>(this Exception exception, out TValidationException? validationException)
+        where TValidationException : Exception, IAppException
     {
-        var baseException = exception;
-        while (baseException != null)
+        for (var baseException = exception; baseException != null; baseException = baseException.InnerException)
         {
-            if (baseException is AppValidationException appValidationException)
+            if (baseException is TValidationException foundException)
             {
-                validationException = appValidationException;
+                validationException = foundException;
                 return true;
             }
-
-            baseException = baseException.InnerException;
         }
 
         validationException = null;

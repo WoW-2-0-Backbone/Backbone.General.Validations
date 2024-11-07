@@ -30,7 +30,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="WoW2.Backbone.General.Validations.FluentValidation" Version="8.0.0-alpha.2"/>
+        <PackageReference Include="WoW2.Backbone.General.Validations.FluentValidation" Version="8.0.0-alpha.3"/>
     </ItemGroup>
 
 </Project>

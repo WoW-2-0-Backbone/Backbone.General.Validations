@@ -10,7 +10,7 @@
         <Description>Abstractions for handling validations in Backbone projects</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>validations, abstractions, general</PackageTags>
-        <Version>8.0.0-alpha.4</Version>
+        <Version>8.0.0-alpha.5</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.General.Validations.Abstractions</PackageProjectUrl>
@@ -25,7 +25,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="WoW2.Backbone.General.Exceptions.Abstractions" Version="8.0.0-alpha.2" />
+        <PackageReference Include="WoW2.Backbone.General.Exceptions.Abstractions" Version="8.0.0-alpha.5" />
     </ItemGroup>
 
 </Project>
