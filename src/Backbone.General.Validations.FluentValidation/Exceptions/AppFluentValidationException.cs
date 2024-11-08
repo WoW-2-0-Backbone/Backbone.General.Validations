@@ -27,6 +27,22 @@ public class AppFluentValidationException : ValidationException, IAppException
         StatusCode = statusCode;
         Meta = meta ?? new Dictionary<string, string>();
     }
+    
+    /// <summary>
+    /// Initializes a new instance of the <see cref="AppFluentValidationException"/> class with a specified error message.
+    /// </summary>
+    /// <param name="errors">A collection of <see cref="ValidationFailure"/> objects.</param>
+    /// <param name="statusCode">Optional HTTP status code for this exception.</param>
+    /// <param name="meta">Optional metadata for additional information.</param>
+    public AppFluentValidationException(
+        IEnumerable<ValidationFailure> errors,
+        HttpStatusCode statusCode = HttpStatusCode.BadRequest,
+        Dictionary<string, string>? meta = null)
+        : base(errors)
+    {
+        StatusCode = statusCode;
+        Meta = meta ?? new Dictionary<string, string>();
+    }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="AppFluentValidationException"/> class with a specified error message.
